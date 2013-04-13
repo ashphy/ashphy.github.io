@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+html, body {
+  height: 100%;
+}
+
+body {
+}
+
+ul li {
+  list-style: none;  
+}
+
+
+div.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+div.container p {
+    font-size: 120%;
+    line-height: 1.5em;
+}
+
+div#header{
+	height: 393px;
+	width: 940px;
+	color: #FFFFFF;
+	background-color: #000000;
+	background-repeat:no-repeat;
+	background-image: url("../img/top.jpg");
+}
+
+div#header h1 {
+	font-size: 80px;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+	padding-top: 120px;
+	padding-left: 20px;
+}
+
+div#header p.title {
+	font-size: 40px;
+	color: #FAFAFA;
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 1);
+	margin-top: -10px;
+	padding-left: 23px;
+	behavior: url(http://sdlab.naist.jp/members/kazuki-h/css/ie-css3.htc);
+}
+
+div.row {
+  margin-top: 40px;
+}
+
+span.my_paper {
+  text-decoration: underline;
+}
