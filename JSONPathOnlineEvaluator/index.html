@@ -24,7 +24,7 @@
   <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/vendor/jsonpath-0.8.0.js"></script>
+  <script src="js/vendor/jsonpath.js"></script>
   <script src="js/vendor/dump.js"></script>
 </head>
 <body>
@@ -88,7 +88,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
   <script src="js/vendor/jquery.textchange.min.js"></script>
-  
+
   <script>
     var evaluate = function(event, previousText){
         var query = $("input").val();
@@ -99,7 +99,7 @@
           $(".result").append(dump(result));
         }
     }
-    
+
     $(document).ready(function(){
       $('input').bind('textchange', evaluate);
       $('textarea').bind('textchange', evaluate);
