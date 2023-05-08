@@ -1,0 +1,37 @@
+---
+import ProfileSection from "../components/ProfileSection.astro";
+import Wordpress from "../components/Wordpress.astro";
+import OGP from "../components/OGP.astro";
+---
+
+<ProfileSection title="Reviews for my projects">
+  <ul>
+    <li>
+      <a
+        href="https://forest.watch.impress.co.jp/docs/review/315615.html"
+        target="_blank"
+      >
+        【レビュー】Firefoxの検索バーを［Ctrl］＋［F］で隠す「Hide Find Bar with
+        Ctrl+F」 - 窓の杜
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://forest.watch.impress.co.jp/docs/review/320217.html"
+        target="_blank"
+      >
+        【レビュー】Wiiリモコンで「PowerPoint」を操作「Wiiリモコンで楽々プレゼンテーション」
+        - 窓の杜
+      </a>
+    </li>
+  </ul>
+</ProfileSection>
+
+<style>
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+</style>

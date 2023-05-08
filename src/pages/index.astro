@@ -1,0 +1,48 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import Layout from "../layouts/Layout.astro";
+import Skills from "../sections/Skills.astro";
+import WorkExperience from "../sections/WorkExperience.astro";
+import Qualification from "../sections/Qualification.astro";
+import ExternalBlogPosts from "../sections/ExternalBlogPosts.astro";
+import Awards from "../sections/Awards.astro";
+import EducationalBackground from "../sections/EducationalBackground.astro";
+import AcademicPublications from "../sections/AcademicPublications.astro";
+import SocialAccounts from "../sections/SocialAccounts.astro";
+import Lectures from "../sections/Lectures.astro";
+import Design from "../sections/Design.astro";
+import OSS from "../sections/OSS.astro";
+import Reviews from "../sections/Reviews.astro";
+import Languages from "../sections/Languages.astro";
+import Header from "../sections/Header.astro";
+import ProfileSection from "../components/ProfileSection.astro";
+---
+
+<Layout title="ashphy - Hamasaki Kazuki">
+  <Header />
+
+  <main>
+    <SocialAccounts />
+    <Skills />
+    <WorkExperience />
+    <OSS />
+    <Lectures />
+    <ExternalBlogPosts />
+    <Reviews />
+    <Design />
+    <Awards />
+    <Qualification />
+    <Languages />
+    <EducationalBackground />
+    <AcademicPublications />
+  </main>
+
+  <footer>
+    <ProfileSection title="Contact">
+      <p>ashphy@ashphy.com</p>
+    </ProfileSection>
+  </footer>
+</Layout>
+
+<style></style>

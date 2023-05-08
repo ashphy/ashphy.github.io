@@ -1,0 +1,41 @@
+---
+import ProfileSection from "../components/ProfileSection.astro";
+---
+
+<ProfileSection title="Work Experience">
+  <div>
+    <h3>Freelance Engineer <span class="duration">2022 - present</span></h3>
+    <ul>
+      <li>Digital Transformation Strategy Consulting</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>
+      Internet Initiative Japan Inc. <span class="duration">2013-2020</span>
+    </h3>
+    <ul>
+      <li>
+        Developed the cloud platform
+        <a href="https://www.iij.ad.jp/en/biz/p2/">IIJ GIO</a> as a front and backend
+        engineer. Also, as an on-call engineer maintained and operated our services.
+      </li>
+      <li>
+        Planned and designed the new cloud service, then developed Its
+        management console and background orchestration systems.
+      </li>
+      <li>
+        Managed the CI/CD platform build with GitHub Enterprise and drone.io for
+        400+ users in the company. Made the documents and lectures for CI/CD to
+        introduce into the department.
+      </li>
+    </ul>
+  </div>
+</ProfileSection>
+
+<style>
+  .duration {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+</style>

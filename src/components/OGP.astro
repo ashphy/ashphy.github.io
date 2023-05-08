@@ -1,0 +1,19 @@
+---
+import { Picture } from "@astrojs/image/components";
+import ogp from "ogp-parser";
+import Card from "./Card.astro";
+
+export interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+const post = await ogp(src);
+---
+
+<Card
+  title={post.title}
+  siteName={post.ogp["og:site_name"]}
+  image={post.ogp["og:image"][0]}
+  url={post.ogp["og:url"]}
+/>

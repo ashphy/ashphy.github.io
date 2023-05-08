@@ -1,0 +1,42 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { ImageMetadata } from "astro";
+
+export interface Props {
+  description: string;
+  src: ImageMetadata;
+  url: string;
+}
+
+const { src, description, url } = Astro.props;
+---
+
+<div>
+  <a href={url} target="_blank">
+    <Picture
+      src={src}
+      alt={description}
+      widths={[300, 600, 900]}
+      aspectRatio="16:9"
+      sizes="300px"
+    />
+    <p>{description}</p>
+  </a>
+</div>
+
+<style>
+  a,
+  a:hover,
+  a:visited {
+    color: #1f1000;
+  }
+
+  p {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+  }
+</style>

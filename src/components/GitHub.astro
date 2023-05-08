@@ -1,0 +1,22 @@
+---
+import { Picture } from "@astrojs/image/components";
+import ogp from "ogp-parser";
+import Card from "./Card.astro";
+
+export interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+const repository = await ogp(src);
+---
+
+<Card
+  title={repository.ogp["og:title"]}
+  siteName={repository.ogp["og:site_name"]}
+  image={repository.ogp["og:image"][0]}
+  url={repository.ogp["og:url"]}
+/>
+
+<!-- //       aspectRatio={`${repository.ogp["og:image:width"]}:${repository.ogp["og:image:height"]}}`}
+-->

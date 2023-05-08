@@ -1,0 +1,29 @@
+---
+export interface Props {
+  title: string;
+  authors: string[];
+  publisher?: string;
+  publishedDate?: string;
+  location?: string;
+  url?: string;
+}
+
+const { title, authors, publisher, publishedDate, location, url } = Astro.props;
+---
+
+<div>
+  <h3><a href={url} target="_blank">{title}</a></h3>
+  <p>{authors.join(", ")}, {publisher}, {publishedDate}</p>
+</div>
+
+<style>
+  h3 {
+    font-size: 1rem;
+    margin-block-end: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,217 @@
+---
+import { Icon } from "astro-icon";
+import ProfileSection from "../components/ProfileSection.astro";
+---
+
+<ProfileSection title="Skills">
+  <h3>Frontend</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="backbonedotjs" />
+          </span>
+          Backbone.js / Marionette.js
+        </td>
+        <td>
+          7 years experience. Created for the management consoles of public
+          cloud service.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="react" />
+          </span>
+          React
+        </td>
+        <td>2 years experience.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="typescript" />
+          </span>
+          TypeScript
+        </td>
+        <td>1 year experience.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="gatsby" />
+          </span>
+          Gatsby
+        </td>
+        <td>2 years experience. Used for my OSS projects</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="astro" />
+          </span>
+          Astro
+        </td>
+        <td>This site is built by astro.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Backend</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="mdi" name="language-ruby-on-rails" />
+          </span>
+          Ruby on Rails
+        </td>
+        <td>
+          7 years experience. Created API servers and cloud orchestration
+          services.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="python" />
+          </span>
+          Python
+        </td>
+        <td>
+          3 years experience. Used for operation scripts and machine learning.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="mysql" />
+          </span>
+          MySQL
+        </td>
+        <td>7 years experience.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="mdi" name="language-java" />
+          </span>
+          Java
+        </td>
+        <td>6 years experience. See also AWARD section.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Mobile</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="flutter" />
+          </span>
+          Flutter
+        </td>
+        <td>1 year experience.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Design</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="affinitydesigner" />
+          </span>
+          Affinity Designer
+        </td>
+        <td>Used for logo designs.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="adobepremierepro" />
+          </span>
+          Adobe Premier Pro
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Extra Skills</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="uil" name="process" />
+          </span>
+          Software Process
+        </td>
+        <td>My major in master's course.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon">
+            <Icon pack="simple-icons" name="github" />
+          </span>
+          GitHub Enterprise Server
+        </td>
+        <td>
+          I was an administrator of self-hosted GitHub Enterprise Server for
+          400+ users.
+        </td>
+      </tr>
+      <tr>
+        <td>Agile / Scrum</td>
+        <td>3 years experience.</td>
+      </tr>
+    </tbody>
+  </table>
+</ProfileSection>
+
+<style>
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    margin-left: 10px;
+  }
+
+  td {
+    align-self: center;
+  }
+
+  td:nth-child(1) {
+    display: inline-flex;
+    width: 300px;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
+  span.icon {
+    display: inline-flex;
+    align-self: center;
+    margin-right: 5px;
+  }
+
+  @media screen and (max-width: 600px) {
+    td {
+      display: block;
+    }
+
+    td:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+</style>

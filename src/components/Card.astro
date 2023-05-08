@@ -1,0 +1,78 @@
+---
+import { Picture } from "@astrojs/image/components";
+export interface Props {
+  title: string;
+  siteName?: string;
+  image: string;
+  url: string;
+}
+
+const { title, siteName, image, url } = Astro.props;
+---
+
+<div class="card">
+  <a href={url} target="_blank">
+    <Picture
+      src={image}
+      width="100%"
+      widths={[300, 600, 900]}
+      aspectRatio="16:9"
+      sizes="300px"
+      alt={title}
+      fit="cover"
+    />
+
+    <div class="meta">
+      <p class="site-name">
+        {siteName}
+      </p>
+
+      <p class="title">
+        {title}
+      </p>
+    </div>
+  </a>
+</div>
+
+<style>
+  div.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    outline: 1px solid #dedede;
+    transition: box-shadow 0.5s;
+  }
+
+  div.card:hover {
+    box-shadow: 0 0 15px -5px #91908d;
+    transition: box-shadow 0.5s;
+  }
+
+  div.meta {
+    padding: 5px;
+  }
+
+  img {
+    display: block;
+    border-radius: 8px 8px 0 0;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p.site-name {
+    color: #5e5e5e;
+    font-size: 0.7rem;
+  }
+
+  p.title {
+    color: #1f1000;
+  }
+</style>

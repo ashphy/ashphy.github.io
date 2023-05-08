@@ -1,0 +1,37 @@
+---
+import kebabCase from "just-kebab-case";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section id={kebabCase(title)}>
+  <h2>{title}</h2>
+  <slot />
+</section>
+
+<style>
+  section {
+    margin-bottom: 80px;
+  }
+
+  h2 {
+    font-family: "Marcellus SC", serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.06rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede;
+  }
+
+  @media screen and (max-width: 400px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+</style>

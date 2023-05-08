@@ -1,0 +1,103 @@
+---
+import ProfileSection from "../components/ProfileSection.astro";
+import Account from "../components/Account.astro";
+---
+
+<ProfileSection title="Social Accounts">
+  <div>
+    <Account
+      service="Mastodon"
+      username="@ashphy@mstdn.nere9.help"
+      icon={import("../assets/logos/mastodon.png")}
+      url="https://mstdn.nere9.help/@ashphy"
+    />
+    <Account
+      service="Misskey"
+      username="@ashphy@misskey.io"
+      icon={import("../assets/logos/misskey.png")}
+      url="https://misskey.io/@ashphy"
+    />
+    <Account
+      service="Twitter"
+      username="@ashphy"
+      icon={import("../assets/logos/twitter.png")}
+      url="https://twitter.com/ashphy"
+    />
+    <Account
+      service="facebook"
+      username="ashphy"
+      icon={import("../assets/logos/facebook.png")}
+      url="https://www.facebook.com/ashphy/"
+    />
+    <Account
+      service="GitHub"
+      username="ashphy"
+      icon={import("../assets/logos/github.png")}
+      url="https://github.com/ashphy"
+    />
+    <Account
+      service="Booth"
+      username="ashphy"
+      icon={import("../assets/logos/booth.png")}
+      url="https://ashphy.booth.pm/"
+    />
+    <Account
+      service="WordPress"
+      username="Blog (English)"
+      icon={import("../assets/logos/wordpress.png")}
+      url="https://blog.ashphy.com/"
+    />
+    <Account
+      service="Hatena Blog"
+      username="Blog (Japanese)"
+      icon={import("../assets/logos/hatena_blog.png")}
+      url="https://ashphy.hateblo.jp/"
+    />
+    <Account
+      service="Zenn"
+      username="Tech articles (Japanese)"
+      icon={import("../assets/logos/zenn.png")}
+      url="https://zenn.dev/ashphy"
+    />
+    <Account
+      service="LinkedIn"
+      username="Hamasaki Kazuki"
+      icon={import("../assets/logos/linkedin.png")}
+      url="https://linkedin.com/in/ashphy"
+    />
+    <Account
+      service="Twitch"
+      username="ashphy22"
+      icon={import("../assets/logos/twitch.png")}
+      url="https://www.twitch.tv/ashphy22"
+    />
+    <Account
+      service="Instagram"
+      username="ashphy"
+      icon={import("../assets/logos/instagram.png")}
+      url="https://www.instagram.com/ashphy/"
+    />
+    <Account
+      service="Flickr"
+      username="ashphy camera"
+      icon={import("../assets/logos/flickr.png")}
+      url="https://www.flickr.com/photos/ashphy/"
+    />
+  </div>
+</ProfileSection>
+
+<style>
+  div {
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  @media screen and (max-width: 400px) {
+    div {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+</style>

@@ -1,0 +1,84 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { ImageMetadata } from "astro";
+
+export interface Props {
+  service: string;
+  username: string | undefined;
+  icon: ImageMetadata;
+  url: string;
+}
+
+const { icon, service, username, url } = Astro.props;
+---
+
+<a rel="me" href={url} target="_blank">
+  <div class="account">
+    <Picture
+      src={icon}
+      width="48px"
+      height="48px"
+      widths={[48, 96, 144]}
+      sizes="48px"
+      alt={service}
+    />
+    <div>
+      <p class="service">{service}</p>
+      <p class="username">{username}</p>
+    </div>
+  </div>
+</a>
+
+<style>
+  a {
+    display: block;
+    width: 280px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 20px;
+    margin: 10px 10px;
+    transition: box-shadow 0.5s;
+  }
+
+  a:hover {
+    box-shadow: 0 0 15px -5px #afadaa;
+    outline: 1px solid #dedede;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: box-shadow 0.5s;
+  }
+
+  a:active {
+    background-color: #f2eee6;
+  }
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 2px;
+  }
+
+  img {
+    display: block;
+    padding: 0 10px;
+  }
+
+  .account {
+    display: flex;
+    align-items: center;
+  }
+
+  .service {
+    color: #421c08;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .username {
+    color: #5e5e5e;
+    font-size: 14px;
+    line-height: 1;
+  }
+</style>

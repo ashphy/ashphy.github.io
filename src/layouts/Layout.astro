@@ -1,0 +1,102 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+import { SEO } from "astro-seo";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Font Optimization -->
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mukta:wght@400;700&family=Lexend+Deca&display=block"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <SEO
+      title="ashphy - Hamasaki Kazuki"
+      description="Profile site of ashphy"
+      openGraph={{
+        basic: {
+          title: "Profile site of ashphy",
+          type: "website",
+          url: "https://ashphy.com",
+          image: "https://ashphy.com/ogp.png",
+        },
+      }}
+      twitter={{
+        creator: "@ashphy",
+      }}
+      extend={{
+        // extending the default meta tags
+        // meta: [
+        //   {
+        //     name: "twitter:image",
+        //     content:
+        //       "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        //   },
+        //   { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+        //   { name: "twitter:description", content: "Agent" },
+        // ],
+      }}
+    />
+
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-MJWQ2RD"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GTM-MJWQ2RD");
+    </script>
+  </head>
+
+  <body>
+    <slot />
+    <style is:global>
+      html {
+        font-family: "Mukta", "Helvetica Neue", Arial,
+          "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo,
+          sans-serif;
+        background-color: #fffbf3;
+        color: #421c08;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+
+      a,
+      a:visited {
+        color: #0045bd;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </body>
+</html>
