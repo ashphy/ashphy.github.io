@@ -1,4 +1,6 @@
 ---
+import Author from "../components/Author.astro";
+
 export interface Props {
   title: string;
   authors: string[];
@@ -8,12 +10,29 @@ export interface Props {
   url?: string;
 }
 
+function isMe(name: string) {
+  return name === "Kazuki Hamasaki" || name === "濱崎 一樹";
+}
+
 const { title, authors, publisher, publishedDate, location, url } = Astro.props;
 ---
 
 <div>
   <h3><a href={url} target="_blank">{title}</a></h3>
-  <p>{authors.join(", ")}, {publisher}, {publishedDate}</p>
+  <p>
+    {
+      authors.map((author, index, array) => {
+        return (
+          <>
+            {isMe(author) ? <strong>{author}</strong> : author}
+            {array.length - 1 === index ? "" : ", "}
+          </>
+        );
+      })
+    },
+    {publisher},
+    {publishedDate}
+  </p>
 </div>
 
 <style>
