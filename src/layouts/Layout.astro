@@ -97,6 +97,13 @@ const { title } = Astro.props;
       a:hover {
         text-decoration: underline;
       }
+
+      @media screen and (max-width: 600px) {
+        li {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
     </style>
   </body>
 </html>
