@@ -36,5 +36,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.8.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
