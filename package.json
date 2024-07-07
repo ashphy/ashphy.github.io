@@ -22,7 +22,7 @@
     "astro-robots-txt": "^0.5.0",
     "astro-seo": "^0.7.2",
     "just-kebab-case": "^4.2.0",
-    "ogp-parser": "^0.7.1",
+    "ogp-parser": "^0.8.1",
     "sharp": "^0.31.3"
   },
   "devDependencies": {
