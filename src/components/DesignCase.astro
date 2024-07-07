@@ -1,10 +1,9 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 export interface Props {
   description: string;
-  src: ImageMetadata;
+  src: string;
   url: string;
 }
 
@@ -13,12 +12,10 @@ const { src, description, url } = Astro.props;
 
 <div>
   <a href={url} target="_blank">
-    <Picture
+    <Image
       src={src}
       alt={description}
-      widths={[300, 600, 900]}
-      aspectRatio="16:9"
-      sizes="300px"
+      width={300}      
     />
     <p>{description}</p>
   </a>

@@ -1,25 +1,24 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 export interface Props {
   title: string;
   siteName?: string;
   image: string;
+  width: number;
+  height: number;
   url: string;
 }
 
-const { title, siteName, image, url } = Astro.props;
+const { title, width, height, siteName, image, url } = Astro.props;
 ---
 
 <div class="card">
   <a href={url} target="_blank">
-    <Picture
+    <Image
       src={image}
-      width="100%"
-      widths={[300, 600, 900]}
-      aspectRatio="16:9"
-      sizes="300px"
       alt={title}
-      fit="cover"
+      width={300}
+      height={300 / (16/9)}
     />
 
     <div class="meta">
@@ -55,6 +54,7 @@ const { title, siteName, image, url } = Astro.props;
   img {
     display: block;
     border-radius: 8px 8px 0 0;
+    object-fit: cover;
   }
 
   a,

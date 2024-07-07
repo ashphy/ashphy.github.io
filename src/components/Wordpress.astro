@@ -1,19 +1,20 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import ogp from "ogp-parser";
 import Card from "./Card.astro";
+import { getOgp } from "../lib/ogp";
 
 export interface Props {
   src: string;
 }
 
 const { src } = Astro.props;
-const post = await ogp(src);
+const ogp = await getOgp(src);
 ---
 
 <Card
-  title={post.oembed.title}
-  siteName={post.ogp["og:site_name"]}
-  image={post.ogp["og:image"][0]}
-  url={post.ogp["og:url"]}
+  title={ogp.title}
+  siteName={ogp.siteName}
+  image={ogp.imageURL}
+  width={ogp.width}
+  height={ogp.height}
+  url={ogp.url}
 />

@@ -2,22 +2,26 @@
 import ProfileSection from "../components/ProfileSection.astro";
 import DesignCase from "../components/DesignCase.astro";
 import ShowCase from "../components/ShowCase.astro";
+
+import umetoradio from "../assets/design/umetoradio.png";
+import my_own_figure_making from "../assets/design/my_own_figure_making.png";
+import nekomiku from "../assets/design/nekomiku.png";
 ---
 
 <ProfileSection title="Design">
   <ShowCase>
     <DesignCase
-      src={import("../assets/design/umetoradio.png")}
+      src={umetoradio}
       description="Ume-to-Radio logo (Fan Art)"
       url="https://twitter.com/ashphy/status/1465370725431214082"
     />
     <DesignCase
-      src={import("../assets/design/my_own_figure_making.png")}
+      src={my_own_figure_making}
       description="My Own Figure Making logo (Fan Art)"
       url="https://twitter.com/ashphy/status/1439231599527096323"
     />
     <DesignCase
-      src={import("../assets/design/nekomiku.png")}
+      src={nekomiku}
       description="Nekomiku name logo (Fan Art)"
       url="https://twitter.com/ashphy/status/1439575791570878464"
     />

@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import { ImageMetadata } from "astro";
 
 export interface Props {
@@ -14,11 +14,10 @@ const { icon, service, username, url } = Astro.props;
 
 <a rel="me" href={url} target="_blank">
   <div class="account">
-    <Picture
+    <Image
       src={icon}
-      width="48px"
-      height="48px"
-      widths={[48, 96, 144]}
+      width=48
+      height=48
       sizes="48px"
       alt={service}
     />

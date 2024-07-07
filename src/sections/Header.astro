@@ -1,15 +1,15 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
+import logo from "../assets/ashphy.png";
 ---
 
 <header>
   <h1>
-    <Picture
-      src={import("../assets/ashphy.png")}
+    <Image
+      src={logo}
       alt="ashphy"
-      aspectRatio="16:9"
-      width="600px"
-      widths={[600, 1200, 1800]}
+      width="600"
+      height={600 * 9 / 16}
       sizes="(min-width: 600px) 600px, 100%"
       loading="eager"
     />
