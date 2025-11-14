@@ -4,38 +4,90 @@ import ProfileSection from "../components/ProfileSection.astro";
 
 <ProfileSection title="Work Experience">
   <div>
-    <h3>Freelance Engineer <span class="duration">2022 - present</span></h3>
+    <h3>
+      Independent Consultant / KDDI DIGITAL GATE
+      <span class="duration">Apr 2022 - Present</span>
+    </h3>
     <ul>
       <li>
-        Assists clients in creating new business ventures and promoting digital
-        transformation (DX). Facilitates effective value validation through idea
-        generation workshops, rapid prototyping, and Proof of Concept (PoC)
-        implementation. Recently involved in prototyping applications using AI
-        technologies such as LLMs.
+        Serve as the technical lead for new business incubation, guiding PoC
+        ideation, solution architecture, implementation, verification, and
+        launch for enterprise clients.
+      </li>
+      <li>
+        Build TypeScript/React frontends and serverless backends (Hono on AWS
+        Lambda, Fargate, EC2, DynamoDB; Azure App Service/Cosmos DB) while
+        coaching teams on internal capability building and cloud governance.
+      </li>
+      <li>
+        Introduce Scrum practices, facilitate cross-company squads, and provide
+        AI/LLM technology research to accelerate decision making.
       </li>
     </ul>
   </div>
 
   <div>
     <h3>
-      Internet Initiative Japan Inc. <span class="duration">2013-2020</span>
+      Internet Initiative Japan Inc. (IIJ)
+      <span class="duration">Apr 2013 - Dec 2020</span>
     </h3>
-    <ul>
-      <li>
-        Developed the cloud platform
-        <a href="https://www.iij.ad.jp/en/biz/p2/">IIJ GIO</a> as a front and backend
-        engineer. Also, as an on-call engineer maintained and operated our services.
-      </li>
-      <li>
-        Planned and designed the new cloud service, then developed Its
-        management console and background orchestration systems.
-      </li>
-      <li>
-        Managed the CI/CD platform build with GitHub Enterprise and drone.io for
-        400+ users in the company. Made the documents and lectures for CI/CD to
-        introduce into the department.
-      </li>
-    </ul>
+    <p>
+      Led architecture, development, and operations for the IIJ GIO domestic
+      cloud platform across multiple generations, covering frontend, backend,
+      virtualization, network, and internal CI/CD infrastructure.
+    </p>
+
+    <div class="project">
+      <h4>IIJ GIO Hosting Package Control Panel (2013 - 2014)</h4>
+      <ul>
+        <li>
+          Built and operated a new control panel and orchestration layer for the
+          public cloud service, owning specification design, host operations,
+          and on-call response.
+        </li>
+        <li>
+          Established company-wide CI/CD tooling and rolled it out to improve
+          delivery quality and speed within the project.
+        </li>
+        <li>Stack: JavaScript, Backbone.js, Ruby on Rails, MySQL, Linux/Xen.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h4>IIJ GIO Infrastructure P2 (2014 - 2019)</h4>
+      <ul>
+        <li>
+          Co-led the design of a refreshed KVM-based public cloud, producing UI
+          and orchestration specifications and delivering the management console
+          and automation services end-to-end.
+        </li>
+        <li>
+          Integrated internal systems, negotiated network interfaces, designed
+          network components, fortified CI/CD platforms, and defined operations
+          and test plans for an 8-person squad.
+        </li>
+        <li>
+          Stack: JavaScript/CoffeeScript, Backbone.js/Marionette, Ruby on Rails,
+          MySQL, Linux/KVM+QEMU.
+        </li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h4>IIJ GIO Infrastructure P2 Gen.2 (2019 - 2020)</h4>
+      <ul>
+        <li>
+          Served as development lead for the next-generation unified cloud,
+          driving service ideation, target architecture, frontend delivery,
+          operation and test design, and integration with corporate systems for
+          a 12-person team.
+        </li>
+        <li>
+          Introduced Scrum, led the rollout, and mentored teams to institutionalize agile development.
+        </li>
+        <li>Stack: JavaScript, Python/Flask, Java/Spring, PostgreSQL, VMware.</li>
+      </ul>
+    </div>
   </div>
 </ProfileSection>
 
@@ -43,5 +95,13 @@ import ProfileSection from "../components/ProfileSection.astro";
   .duration {
     font-size: 1rem;
     font-weight: normal;
+  }
+
+  .project {
+    margin-top: 1.5rem;
+  }
+
+  .project h4 {
+    margin-bottom: 0.25rem;
   }
 </style>
