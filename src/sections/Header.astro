@@ -1,17 +1,15 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import logo from "../assets/ashphy.png";
 ---
 
 <header>
   <h1>
-    <Image
+    <Picture
       src={logo}
       alt="ashphy"
-      width="600"
-      height={600 * 9 / 16}
-      sizes="(min-width: 600px) 600px, 100%"
-      loading="eager"
+      formats={['avif', 'webp']}
+      layout='constrained'      
     />
   </h1>
   <div class="profile">
@@ -28,12 +26,7 @@ import logo from "../assets/ashphy.png";
 
   h1 {
     text-align: center;
-    margin-block: 0;
-  }
-
-  img {
-    display: block;
-    aspect-ratio: 16 / 9;
+    margin-block-start: 1rem;
   }
 
   .profile {
@@ -59,11 +52,7 @@ import logo from "../assets/ashphy.png";
     .profile {
       position: static;
       text-align: center;
-    }
-
-    img {
-      width: 100%;
-    }
+    }    
 
     .name {
       position: relative;

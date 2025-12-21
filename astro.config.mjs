@@ -22,5 +22,8 @@ export default defineConfig({
       js: true,
       svg: false,
     })
-  ]
+  ],
+  image: {
+    responsiveStyles: true,
+  }
 });
